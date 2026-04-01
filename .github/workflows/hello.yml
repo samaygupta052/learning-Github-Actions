@@ -1,9 +1,0 @@
-name: my first pipeline
-
-on: [push]
-jobs:
-  hello:
-    runs-on: ubuntu-latest
-    steps:
-      - name: we have to print hello
-        run: echo "hello samay"
