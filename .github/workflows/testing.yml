@@ -1,0 +1,27 @@
+name: building docker image of this application
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubantu-latest
+    steps:
+      - name: checkout code
+        uses: actions/checkout@v4
+  
+      - name: setup python
+        uses: actions/setup-python@v5
+        with:
+          python-version: 3.14
+      
+      - name: install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+        
+      - name: print insallation successful
+        run: echo "installation successful"
+
+      - name: testing the test-cases
+        run: |
+          python3 -m pytest
