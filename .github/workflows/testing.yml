@@ -24,3 +24,6 @@ jobs:
 
       - name: testing the test-cases
         run: python -m pytest
+
+      - name: building docker image
+        run: docker build -t demo-project:latest .
