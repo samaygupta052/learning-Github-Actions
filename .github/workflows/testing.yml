@@ -1,4 +1,4 @@
-name: building docker image of this application
+name: testing test-cases
 
 on: [push]
 
@@ -23,5 +23,4 @@ jobs:
         run: echo "installation successful"
 
       - name: testing the test-cases
-        run: |
-          python3 -m pytest
+        run: python3 -m pytest
