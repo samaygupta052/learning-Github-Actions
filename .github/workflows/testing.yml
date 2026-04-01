@@ -12,7 +12,7 @@ jobs:
       - name: setup python
         uses: actions/setup-python@v5
         with:
-          python-version: 3.14
+          python-version: "3.11"
       
       - name: install dependencies
         run: |
@@ -23,4 +23,4 @@ jobs:
         run: echo "installation successful"
 
       - name: testing the test-cases
-        run: python3 -m pytest
+        run: python -m pytest
